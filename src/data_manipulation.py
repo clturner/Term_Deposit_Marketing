@@ -209,7 +209,7 @@ def transform_skewed_features(df, skew_kurt_dict, skew_threshold=0.75):
     df_transformed = df.copy()
     
     for column, (skewness, _) in skew_kurt_dict.items():
-
+        print("\n")
         column_values = df[column].dropna()  # Drop NaN values to avoid issues
 
         if set(column_values.unique()) <= {0, 1}:  # Check if column is binary (0/1)
